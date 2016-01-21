@@ -6,7 +6,7 @@ library(dplyr)
 filter <- dplyr::filter
 
 #### Read the data ####
-titanic <- read.csv("./Documents/AXA/Training\ Session/R/data_titanic.csv", header = T, sep = ",")
+titanic <- read.csv("./Documents/AXA/Training\ Session/R/r-for-dummies/data/data_titanic.csv", header = T, sep = ",")
 
 #### Exploration ####
 # Get the name and fare of the people that paid their tickets more than $200
@@ -33,12 +33,12 @@ titanic <- read.csv("./Documents/AXA/Training\ Session/R/data_titanic.csv", head
 # Do the same thing but with the fare
 
 #### Machine Learning ####
-train <- read.csv("./Documents/AXA/Training\ Session/R/data_titanic_train.csv", header = T, sep = ",")
-test <- read.csv("./Documents/AXA/Training\ Session/R/data_titanic_test.csv", header = T, sep = ",")
+train <- read.csv("./Documents/AXA/Training\ Session/R/r-for-dummies/data/data_titanic_train.csv", header = T, sep = ",")
+test <- read.csv("./Documents/AXA/Training\ Session/R/r-for-dummies/data/data_titanic_test.csv", header = T, sep = ",")
 
 # Have fun and build the best model you can !
 
-# Test you model ! (to make this piece of code work name you model model) 
+# Test you model ! (to make this piece of code work name you model 'model') 
 predict <- rep(0,nrow(test))
 predict[predict(model, newdata = test, type  ="response") > 0.5]  <- 1
 1 - sum((as.integer(test$survived)-as.integer(predict))^2)/nrow(test)

@@ -6,7 +6,7 @@ library(dplyr)
 filter <- dplyr::filter
 
 #### Read the data ####
-titanic <- read.csv("./Documents/AXA/Training\ Session/R/data_titanic.csv", header = T, sep = ",")
+titanic <- read.csv("./Documents/AXA/Training\ Session/R/r-for-dummies/data/data_titanic.csv", header = T, sep = ",")
 
 #### Exploration ####
 # Get the name and fare of the people that paid their tickets more than $200
@@ -58,8 +58,8 @@ ggplot(titanic, aes(x=as.factor(survived), y=age)) + geom_boxplot(fill = "lightb
 ggplot(titanic, aes(x=as.factor(survived), y=fare)) + geom_boxplot(fill = "lightblue", colour = "black")
 
 #### Machine Learning ####
-train <- read.csv("./Documents/AXA/Training\ Session/R/data_titanic_train.csv", header = T, sep = ",")
-test <- read.csv("./Documents/AXA/Training\ Session/R/data_titanic_test.csv", header = T, sep = ",")
+train <- read.csv("./Documents/AXA/Training\ Session/R/r-for-dummies/data/data_titanic_train.csv", header = T, sep = ",")
+test <- read.csv("./Documents/AXA/Training\ Session/R/r-for-dummies/data/data_titanic_test.csv", header = T, sep = ",")
 
 model <- glm(survived ~ sex + pclass + age, data=train, family=binomial)
 

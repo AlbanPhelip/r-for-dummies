@@ -7,9 +7,9 @@ filter <- dplyr::filter
 
 #### GLM ####
 setosa <- iris %>% filter(Species == "setosa")
-model <- lm(Sepal.Length ~ Sepal.Width + Petal.Length + Petal.Width, data = iris)
+model <- lm(Sepal.Length ~ Sepal.Width + Petal.Length + Petal.Width, data = setosa)
 summary(model)
-predict(model, iris)
+predict(model, setosa)
 
 #### K-means ####
 modelKM <- kmeans(iris[, -5], center = 3)

@@ -84,7 +84,7 @@ iris$greaterThan6 <- iris$Sepal.Length %>% lapply(greaterThan6)
 
 
 #### Small exercise ####
-# Which species has the highest Sepal.Length ?
+# What is the highest Sepal.Length for each Species ?
 iris %>% filter(Species == "virginica") %>% select(Sepal.Length) %>% max
 iris %>% filter(Species == "setosa") %>% select(Sepal.Length) %>% max
 iris %>% filter(Species == "versicolor") %>% select(Sepal.Length) %>% max

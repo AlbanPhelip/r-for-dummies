@@ -10,7 +10,6 @@ plot(iris$Petal.Length, iris$Petal.Width)
 hist(iris$Petal.Length)
 
 # Box plot
-boxplot(iris[,-5])
 boxplot(Sepal.Length ~ Species, data = iris)
 
 #### ggplot2 ####

@@ -43,7 +43,7 @@ colnames(myMatrix) <- c("a", "b", "c")
 rownames(myMatrix) <- c("x", "y")
 myMatrix
 
-myMatrix[, 1]
-myMatrix[, "a"]
 myMatrix[2, 3]
 myMatrix["y", "c"]
+myMatrix[, 1]
+myMatrix[, "a"]

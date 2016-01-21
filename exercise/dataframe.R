@@ -82,9 +82,8 @@ greaterThan6 <- function(value) {
 
 iris$greaterThan6 <- iris$Sepal.Length %>% lapply(greaterThan6)
 
-
 #### Small exercise ####
-# Which species has the highest Sepal.Length ?
+# What is the highest Sepal.Length for each Species ?
 
 # And how about the average ?
 

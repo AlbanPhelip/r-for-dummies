@@ -23,7 +23,6 @@ p <- ggplot(iris, aes(x = Petal.Length, y = Petal.Width, colour = Species))
 p + geom_point(size = 4, alpha = 0.5)
 p + geom_point(size = 7, alpha = 1) + scale_color_manual(values = c("black", "green", "blue"))
 
-
 #### Histogram ####
 # We'll plot the Petal.Lenght of the Species versicolor 
 versicolor <- iris %>% filter(Species == "versicolor")

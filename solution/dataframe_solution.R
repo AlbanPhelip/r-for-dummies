@@ -99,3 +99,8 @@ iris %>% filter(Species == "versicolor") %>% .[, "Sepal.Length"] %>% mean
 library(purrr)
 iris %>% split(.$Species) %>% map(. %>% select(Sepal.Length) %>% max)
 iris %>% split(.$Species) %>% map(. %>% .[, "Sepal.Length"] %>% mean)
+
+
+iris %>% split(.$Species) %>% map(. %>% select(Sepal.Length) %>% colMeans)
+
+

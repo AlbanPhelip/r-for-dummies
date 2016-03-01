@@ -5,7 +5,7 @@ data(iris)
 iris
 
 #### Read and write ####
-read.csv("/path/to/file", header = T, sep = ",")
+data <- read.csv("/path/to/file", header = T, sep = ",")
 write.csv(iris, "./Desktop/iris.csv", row.names = F)
 
 #### Data exploration ####
@@ -20,7 +20,7 @@ summary(iris)
 mean(iris$Sepal.Length)
 
 # Quantile
-quantile(iris$Sepal.Length, 0.25)
+quantile(iris$Sepal.Length, c(0.25, 0.5))
 
 # Filter lines
 # Get lines where Petal.Length > 6

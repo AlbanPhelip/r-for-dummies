@@ -9,7 +9,7 @@ filter <- dplyr::filter
 titanic <- read.csv("./Documents/AXA/Training\ Session/R/r-for-dummies/data/data_titanic.csv", header = T, sep = ",")
 
 #### Exploration ####
-# Get the name and fare of the people that paid their tickets more than $200
+# Get the name and fare of the people that paid their tickets more than $250
 titanic %>% filter(fare > 250) %>% select(name, fare)
 
 # What is the percentage of people under 18 that survived ?
@@ -27,7 +27,7 @@ table(titanic$pclass, titanic$survived) %>% prop.table(margin = 1) %>% .[, "1"] 
 titanic %>% filter(!is.na(age)) %>% .$age %>% mean
 titanic$age %>% na.exclude %>% mean
 
-# What is the average age of the people by depending of if they survived (you may want to use group_by) ?
+# What is the average age of the people by depending of if they survived (you may want to use group_by and be careful of the missing value of the age) ?
 titanic %>% 
   filter(!is.na(age)) %>% 
   select(age, survived) %>% 
